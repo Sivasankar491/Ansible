@@ -1,4 +1,4 @@
-- name: Install nginx
+- name: Install web server
   hosts: local
   tasks:
   - name: Intalling the web service

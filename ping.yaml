@@ -1,5 +1,6 @@
 - name: ping the server
   hosts: local
+  #connection: local #optional when we pass username and password
   tasks:
   - name: ping the local server
     ansible.builtin.ping:

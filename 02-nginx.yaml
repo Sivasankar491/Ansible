@@ -7,6 +7,6 @@
       name: nginx
       state: present 
   - name: Enable to service
-    ansible.builtin.service
+    ansible.builtin.service:
       name: nginx
       state: enabled

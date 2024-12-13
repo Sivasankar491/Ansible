@@ -24,7 +24,7 @@ VALIDATE() {
 }
 CHECK_ROOT
 
-dnf list installed |grep ansible
+dnf list installed |grep ansible > /dev/null 2&>1
 
 if [ $? -ne 0 ]
 then    

@@ -1,5 +1,6 @@
 - name: Install web server
   hosts: local
+  become: true
   tasks:
   - name: Intalling the web service
     ansible.builtin.package:

@@ -3,10 +3,10 @@
   vars_promt:
   - name: NUMBER
     prompt: "Enter a number"
-    provate: false
+    private: false
   tasks:
   - name: Enter a number to check if it is less than 10
     ansible.builtin.debug:
-      msg: "Number is less tha 10"
-    when:
-    {{NUMBER}} | int < 10
+      msg: "{{NUMBER}} is less tha 10"
+    when: {{NUMBER}} | int < 10
+

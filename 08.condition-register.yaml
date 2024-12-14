@@ -1,0 +1,9 @@
+- name: Check the user exist if not create a user
+  hosts: local
+  tasks:
+  - name: chekcing user if exist
+    ansible.builtin.command: id expense
+    register: USER
+  - name: Check the user informatio
+    ansible.builtin.debug:
+      msg: {{USER}}

@@ -1,0 +1,6 @@
+- name: Passing the variables in Command line
+  hosts: local
+  tasks:
+  - name: Passing the variables in command line
+    ansible.buildin.debug:
+      msg: "When is the {{COURSE}} batch starting and what is the {{DURATION}}"

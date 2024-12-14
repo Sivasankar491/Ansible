@@ -5,4 +5,4 @@
   tasks:
   - name: Variables passing through var file
     ansible.builtin.debug:
-      msg: "{{COURSE}} batch started in Aug, which takes {{DURATION}}"
+      msg: "{{COURSE}} batch started in Aug, which takes {{DURATION}} to complete"

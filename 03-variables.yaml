@@ -6,5 +6,4 @@
   tasks:
   - name: Play level variables
     ansible.builtin.debug:
-      msg: "I have started revising the {{COURSE}} which was {{DURATION}} duration"
-      
+    msg: "I have started revising the {{COURSE}} which was {{DURATION}} duration"

@@ -1,0 +1,8 @@
+- name: Variables passing throough a file
+  hosts: local
+  vars_file:
+  - vars.yaml
+  tasks:
+  - name: Variables passing through var file
+    ansible.builtin.debug:
+      msg: "{{COUSE}} batch started in Aug, which takes {{DURATION}}"

@@ -7,7 +7,6 @@
   - name: Play level variables
     ansible.builtin.debug:
       msg: "I have started revising the {{COURSE}} course which was {{DURATION}} duration"
-  tasks:
   - name: Revision duration
     ansible.builtin.debug:
       msg: "I have decided to complete {{COURSE}} couse in {{DURATION}} days"

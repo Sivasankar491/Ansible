@@ -10,4 +10,4 @@
   tasks:
   - name: Using prompt variables
     ansible.builtin.debug:
-      msg: "I joined a {{COURSE}} batch started in Aug and the duaration is: {{DURAION}}"
+      msg: "I joined a {{COURSE}} batch started in Aug and the duaration is: {{DURATION}}"

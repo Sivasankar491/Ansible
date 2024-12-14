@@ -3,7 +3,7 @@
   become: true
   tasks: 
   - name: Using maps
-    ansible.builtin.debug:
+    ansible.builtin.package:
       name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
@@ -11,4 +11,3 @@
     - {name: httpd, state: present}
     - {name: nginx, state: absent}
 
-    

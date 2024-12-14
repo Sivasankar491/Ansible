@@ -1,6 +1,6 @@
 - name: Variables passing throough a file
   hosts: local
-  vars_file:
+  vars_files:
   - vars.yaml
   tasks:
   - name: Variables passing through var file

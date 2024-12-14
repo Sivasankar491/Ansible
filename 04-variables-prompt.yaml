@@ -6,9 +6,8 @@
     private: false
   - name: DURATION
     prompt: "Enter the duration"
-    provate: false
+    private: false
   tasks:
   - name: Using prompt variables
     ansible.builtin.debug:
       msg: "I joined a {{COURSE}} batch started in Aug and the duaration is: {{DURAION}}"
-      

@@ -2,8 +2,15 @@
   hosts: local
   vars:
   - COURSE: "Devops with AWS"
-  - DURATION: "120 HRs"
+  - DURATION: "120 dayss"
   tasks:
   - name: Play level variables
     ansible.builtin.debug:
-    msg: "I have started revising the {{COURSE}} course which was {{DURATION}} duration"
+      msg: "I have started revising the {{COURSE}} course which was {{DURATION}} duration"
+  tasks:
+  - name: Revision duration
+    ansible.builtin.debug:
+      msg: "I have decided to complete {{COURSE}} in {{DURATION}} days"
+    vars:
+    - DURATION: "90 Days"
+

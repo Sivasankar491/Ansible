@@ -1,0 +1,14 @@
+- name: Using prompt variables
+  hosts: local
+  vars_prompt:
+  - name: COURSE
+    prompt: "Enter the course name"
+    private: false
+  - name: DURATION
+    prompt: "Enter the duration"
+    provate: false
+  tasks:
+  - name: Using prompt variables
+    ansible.builtin.debug:
+      msg: "I joined a {{COURSE}} batch started in Aug and the duaration is: {{DURAION}}"
+      

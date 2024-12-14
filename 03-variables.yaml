@@ -9,7 +9,7 @@
       msg: "I have started revising the {{COURSE}} course which was {{DURATION}} duration"
   - name: Revision duration
     ansible.builtin.debug:
-      msg: "I have decided to complete {{COURSE}} couse in {{DURATION}} days"
+      msg: "I have decided to complete {{COURSE}} couse in {{DURATION}} duration"
     vars:
     - DURATION: "90 Days"
 

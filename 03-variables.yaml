@@ -10,7 +10,7 @@
   tasks:
   - name: Revision duration
     ansible.builtin.debug:
-      msg: "I have decided to complete {{COURSE}} in {{DURATION}} days"
+      msg: "I have decided to complete {{COURSE}} couse in {{DURATION}} days"
     vars:
     - DURATION: "90 Days"
 

@@ -1,0 +1,10 @@
+- name: Using variables
+  hosts: local
+  vars:
+  - COURSE: "Devops with AWS"
+  - DURATION: "120 HRs"
+  tasks:
+  - name: Play level variables
+    ansible.builtin.debug:
+      msg: "I have started revising the {{COURSE}} which was {{DURATION}} duration"
+      

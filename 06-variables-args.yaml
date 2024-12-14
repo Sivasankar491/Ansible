@@ -4,3 +4,6 @@
   - name: Passing the variables in command line
     ansible.builtin.debug:
       msg: "When is the {{COURSE}} batch starting and what is the {{DURATION}}"
+
+
+#ansible-playbook -i inventory.ini 06-variables-args.yaml --extra-vars "COURSE='Devops with AWS', DURATION='120 Days'"

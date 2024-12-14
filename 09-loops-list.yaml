@@ -1,5 +1,6 @@
 - name: Install multiple packages using LOOPS
   hosts: local
+  become: true
   tasks: 
   - name: Using loops
     ansible.builtin.package:

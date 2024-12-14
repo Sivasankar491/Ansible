@@ -1,8 +1,8 @@
 - name: check the number is greater than 10 or not
   hosts: local
-  vars_promt:
+  vars_promPt:
   - name: NUMBER
-    prompt: Enter a number
+    prompt: "Enter a number"
     private: false
   tasks:
   - name: Enter a number to check if it is less than 10

@@ -1,6 +1,6 @@
 - name: check the number is greater than 10 or not
   hosts: local
-  vars_promPt:
+  vars_prompt:
   - name: NUMBER
     prompt: "Enter a number"
     private: false

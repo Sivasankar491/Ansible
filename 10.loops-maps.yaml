@@ -1,0 +1,14 @@
+- name: Install/Uninstall packages using loops
+  hosts: local
+  become: true
+  tasks: 
+  - name: Using maps
+    ansible.builtin.debug:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: mysql, state: absent}
+    - {name: httpd, state: present}
+    - {name: nginx, state: absent}
+
+    

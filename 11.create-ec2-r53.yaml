@@ -46,4 +46,15 @@
     loop: "{{ec2_instances.results}}"
 
 
-    
+ - name: Created R53 records for Frontend server with public IP adress
+    amazon.aws.route53:
+      state: present
+      zone: "{{ZONE}}"
+      record: "{{item.item}}.{{ZONE}}"
+      type: A
+      value: "{{item.instances[0].public_ip_address}}"
+      ttl: 1
+      overwrite: true
+      wait: true
+    loop: "{{ec2_instances.results}}"
+    when: item.item == "frontend"

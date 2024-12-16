@@ -33,16 +33,16 @@
     ansible.builtin.debug:
       msg: "{{ec2_instances}}"
 
-  - name: Created R53 records for Expense project
+  - name: Created R53 records for Expense project with private IP adress
     amazon.aws.route53:
       state: present
       zone: "{{ZONE}}"
       record: "{{item.item}}.{{ZONE}}"
-      value: "{{item.ec2_instances[0].private_ip_address}}"
-      type: A
+      value: "{{item.instances[0].private_ip_address}}"
       ttl: 1
       overwrite: true
       wait: true
     loop: "{{ec2_instances.results}}"
+
 
     

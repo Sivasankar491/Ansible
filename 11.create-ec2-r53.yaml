@@ -7,6 +7,13 @@
   - SUBNET_ID: subnet-0d11182d94c27f1fd
   - SG_ID: sg-02220caccee1bf2cd
   tasks:
+  - name: ansible to install boto3 and botocore
+    ansible.builtin.pip:
+      name:
+      - boto3
+      - botocore
+      executable: pip3.9
+      
   - name: Create ec2-instances
     amazon.aws.ec2_instance:
       name: "{{item}}"

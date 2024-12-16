@@ -19,8 +19,10 @@
     - mysql
     - backend
     - frontend
-    register: ec2-instance
+    register: ec2_instances
 
   - name: print the EC2 instances information
     ansible.builtin.debug:
-      msg: "{{ec2-instace}}"
+      msg: "{{ec2_instances}}"
+
+    

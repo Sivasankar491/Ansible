@@ -21,5 +21,5 @@
     register: ec2-instance
 
   - name: print the EC2 instances information
-    ansible.builtin.degug:
+    ansible.builtin.debug:
       msg: "{{ec2-instace}}"

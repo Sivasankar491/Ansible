@@ -6,7 +6,7 @@
   - AMI_ID: ami-09c813fb71547fc4f
   - SUBNET_ID: subnet-0d11182d94c27f1fd
   - SG_ID: sg-02220caccee1bf2cd
-  - ZONE: "kotte.site"
+  - ZONE: kotte.site
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:

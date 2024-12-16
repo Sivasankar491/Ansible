@@ -45,8 +45,7 @@
       wait: true
     loop: "{{ec2_instances.results}}"
 
-
- - name: Created R53 records for Frontend server with public IP adress
+  - name: Created R53 records for Frontend server with public IP adress
     amazon.aws.route53:
       state: present
       zone: "{{ZONE}}"

@@ -38,6 +38,7 @@
       state: present
       zone: "{{ZONE}}"
       record: "{{item.item}}.{{ZONE}}"
+      type: A
       value: "{{item.instances[0].private_ip_address}}"
       ttl: 1
       overwrite: true

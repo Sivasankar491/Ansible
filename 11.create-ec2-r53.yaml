@@ -1,4 +1,5 @@
 - name: create ec2-insances & R53 records for Expense project
+  hosts: local
   connection: local
   vars:
   - VPC_ID: vpc-02311bb6ec227cbf5

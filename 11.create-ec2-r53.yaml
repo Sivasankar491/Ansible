@@ -6,6 +6,7 @@
   - AMI_ID: ami-09c813fb71547fc4f
   - SUBNET_ID: subnet-0d11182d94c27f1fd
   - SG_ID: sg-02220caccee1bf2cd
+  - ZONE: "kotte.site"
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
@@ -13,7 +14,7 @@
       - boto3
       - botocore
       executable: pip3.9
-      
+
   - name: Create ec2-instances
     amazon.aws.ec2_instance:
       name: "{{item}}"
@@ -31,5 +32,17 @@
   - name: print the EC2 instances information
     ansible.builtin.debug:
       msg: "{{ec2_instances}}"
+
+  - name: Created R53 records for Expense project
+    amazon.aws.route53:
+      state: present
+      zone: "{{ZONE}}"
+      record: "{{item.item}}.{{zone}}"
+      value: "{{item.ec2_instances[0].private_ip_address}}"
+      type: A
+      ttl: 1
+      overwrite: true
+      wait: true
+    loop: "{{ec2_instances.results}}"
 
     

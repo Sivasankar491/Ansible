@@ -22,4 +22,4 @@
 
   - name: print the EC2 instances information
     ansible.builtin.degug:
-      msg: "{{ec2-instace}}""
+      msg: "{{ec2-instace}}"
